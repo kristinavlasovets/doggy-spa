@@ -22,7 +22,9 @@
   "rules": {
     "import/prefer-default-export": "off",
     "react/jsx-one-expression-per-line": "off",
+    "object-curly-newline": "off",
     "@next/next/no-page-custom-font": "off",
+    "@next/next/no-img-element": "off",
     "operator-linebreak": "off",
     "react-hooks/rules-of-hooks": "off",
     "simple-import-sort/imports": "error",

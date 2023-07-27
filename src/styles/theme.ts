@@ -44,4 +44,24 @@ export const commonTheme: CommonTheme = {
     cinzelDecorative: "'Cinzel Decorative', sans-serif",
     tangerine: "'Tangerine', sans-serif",
   },
+  width: {
+    xs: 72,
+    s: 100,
+  },
+  height: {
+    xxs: 12,
+    xs: 52,
+    s: 110,
+    l: 420,
+    xl: 484,
+  },
+  margins: {
+    xxxs: 0,
+    xs: 25,
+    s: 50,
+  },
+  paddings: {
+    xxxs: 0,
+    xs: 25,
+  },
 };

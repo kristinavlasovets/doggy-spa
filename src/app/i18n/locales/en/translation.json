@@ -1,5 +1,30 @@
 {
   "Home.title": "Home",
+  "Home.banner": "Get 20% OFF When You Book A Spa Day For Your Animal Today!",
+
+  "Info.title": "Info",
+
+  "SpaServices.title": "Spa Services",
+
+  "BookAppointment.title": "Book Appointment",
+
+  "Blog.title": "Blog",
+
+  "AboutUs.title": "About Us",
+
+  "ContactUs.title": "Contact Us",
+
+  "FAQs.title": "FAQs",
+
+  "HelpWithNavigation.title": "Help With Navigation",
+
+  "Cancellations.title": "Cancellations",
+
+  "TrackYourAnimal.title": "Track Your Animal",
+
+  "LuxeAnnualSpaDay.title": "Luxe’s Annual Spa Day 2021",
+
+  "PaymentOptions.title": "Payment Options",
 
   "Footer.button": "Submit"
 }

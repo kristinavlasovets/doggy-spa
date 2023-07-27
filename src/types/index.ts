@@ -7,3 +7,12 @@ export interface LanguageProps {
 export interface PageProps {
   params: LanguageProps;
 }
+
+export interface Dog {
+  data: {
+    breed: {
+      message: string;
+      status: string;
+    };
+  };
+}

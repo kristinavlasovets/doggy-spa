@@ -6,15 +6,15 @@ import { PageProps } from '@/types';
 
 import { useMyTranslation } from '../i18n/client';
 
-import { Title } from './styles';
+import { Title, Wrapper } from './styles';
 
 const Home: FC<PageProps> = () => {
   const { t } = useMyTranslation();
 
   return (
-    <div>
+    <Wrapper>
       <Title>{t('Home.title')}</Title>
-    </div>
+    </Wrapper>
   );
 };
 export default Home;

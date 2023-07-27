@@ -2,7 +2,9 @@ import React, { ReactNode } from 'react';
 import { dir } from 'i18next';
 
 import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import { LanguageContextProvider } from '@/context/LanguageContext';
+import { ApolloWrapper } from '@/lib/apollo-wrapper';
 
 import { languages } from '../i18n/settings';
 
@@ -35,7 +37,10 @@ export default function RootLayout({
       <body>
         <LanguageContextProvider lng={lng}>
           <>
-            {children}
+            <Header />
+            <ApolloWrapper>
+              <main>{children}</main>
+            </ApolloWrapper>
             <Footer />
           </>
         </LanguageContextProvider>

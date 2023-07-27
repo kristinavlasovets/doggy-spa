@@ -40,4 +40,24 @@ export interface CommonTheme {
     cinzelDecorative: string;
     tangerine: string;
   };
+  width: {
+    xs: number;
+    s: number;
+  };
+  height: {
+    xxs: number;
+    xs: number;
+    s: number;
+    l: number;
+    xl: number;
+  };
+  margins: {
+    xxxs: number;
+    xs: number;
+    s: number;
+  };
+  paddings: {
+    xxxs: 0;
+    xs: 25;
+  };
 }

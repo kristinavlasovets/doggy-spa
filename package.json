@@ -21,12 +21,16 @@
     "^@/(.*)$": "<rootDir>/src/$1"
   },
   "dependencies": {
+    "@apollo/client": "^3.8.0-rc.1",
+    "@apollo/experimental-nextjs-app-support": "^0.4.1",
     "accept-language": "^3.0.18",
+    "graphql": "^16.7.1",
     "i18next": "^23.3.0",
     "i18next-browser-languagedetector": "^7.1.0",
     "i18next-resources-to-backend": "^1.1.4",
     "next": "13.4.7",
     "node-fetch": "2",
+    "ra-data-graphql": "^4.12.2",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "^13.0.2",

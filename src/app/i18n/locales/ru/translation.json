@@ -1,5 +1,30 @@
 {
   "Home.title": "Главная",
+  "Home.banner": "Получите СКИДКУ 20% при бронировании дня Спа для Вашего Животного сегодня!",
+
+  "Info.title": "Информация",
+
+  "SpaServices.title": "Спа Услуги",
+
+  "BookAppointment.title": "Записаться на прием",
+
+  "Blog.title": "Блог",
+
+  "AboutUs.title": "О Нас",
+
+  "ContactUs.title": "Контакты",
+
+  "FAQs.title": "FAQs",
+
+  "HelpWithNavigation.title": "Помощь с навигацией",
+
+  "Cancellations.title": "Аннулирования",
+
+  "TrackYourAnimal.title": "Отследить своего питомца",
+
+  "LuxeAnnualSpaDay.title": "Ежегодный Спа-день Luxe 2021",
+
+  "PaymentOptions.title": "Способ оплаты",
 
   "Footer.button": "Подписаться"
 }
