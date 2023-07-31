@@ -10,7 +10,7 @@ export const Nav = styled.nav`
   width: ${({ theme }) => theme.width.s}%;
   height: ${({ theme }) => theme.height.s}px;
   background-color: ${({ theme }) => theme.colors.WHITE};
-  font-family: ${({ theme }) => theme.fontFamilies.Cormorant};
+  font-family: ${({ theme }) => theme.fontFamilies.cormorant};
   color: ${({ theme }) => theme.colors.CHARCOAL};
 
   @media (max-width: ${({ theme }) => theme.dimensions.tablet}) {
@@ -20,7 +20,7 @@ export const Nav = styled.nav`
 
 export const LinkItem = styled(Link)<LinkItemProps>`
   margin-right: ${({ theme }) => theme.margins.xs}px;
-  font-family: ${({ theme }) => theme.fontFamilies.Cormorant};
+  font-family: ${({ theme }) => theme.fontFamilies.cormorant};
   font-size: ${({ theme }) => theme.fontSizes.s}px;
   font-weight: ${({ theme }) => theme.fontWeights.xl};
   color: ${({ theme }) => theme.colors.CHARCOAL};

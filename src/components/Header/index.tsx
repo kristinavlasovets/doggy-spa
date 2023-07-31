@@ -1,24 +1,25 @@
 'use client';
 
-import React, { FC } from 'react';
+import React, { FC, useContext } from 'react';
 
-import { useMyTranslation } from '@/app/i18n/client';
+import { serverTranslation } from '@/app/i18n/client';
 import { icons } from '@/constants';
+import { LanguageContext } from '@/context/LanguageContext';
 
-import NavMenu from '../NavMenu';
-
+import NavMenu from './NavMenu';
 import { Banner, Icon, Message, NavBar, Wrapper } from './styles';
 
 const { logo } = icons;
 
 const Header: FC = () => {
-  const { t } = useMyTranslation();
+  const lng = useContext(LanguageContext);
+  const { t } = serverTranslation(lng);
 
   return (
     <Wrapper>
       <NavBar>
         <Icon>{logo}</Icon>
-        <NavMenu variant="header" />
+        <NavMenu />
       </NavBar>
       <Banner>
         <Message>{t('Home.banner')}</Message>

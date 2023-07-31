@@ -1,5 +1,6 @@
 'use client';
 
+import { envVariables } from '@/constants';
 import { ApolloClient, ApolloLink, HttpLink } from '@apollo/client';
 import {
   ApolloNextAppProvider,
@@ -8,10 +9,11 @@ import {
   SSRMultipartLink,
 } from '@apollo/experimental-nextjs-app-support/ssr';
 
+const { apolloServerUri } = envVariables;
+
 function makeClient() {
   const httpLink = new HttpLink({
-    // https://studio.apollographql.com/public/spacex-l4uc6p/
-    uri: 'https://doggos-api.netlify.app/',
+    uri: apolloServerUri,
   });
 
   return new NextSSRApolloClient({

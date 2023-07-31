@@ -74,3 +74,29 @@ export const footerServiceMenu = [
     path: '/',
   },
 ];
+
+export const footerCopyrightCookieMenu = [
+  {
+    name: 'CookiePolicy.title',
+    path: '/',
+  },
+  {
+    name: 'CookiesSettings.title',
+    path: '/',
+  },
+];
+
+export const footerCopyrightTermsMenu = [
+  {
+    name: 'Terms.title',
+    path: '/',
+  },
+  {
+    name: 'Privacy.title',
+    path: '/',
+  },
+  {
+    name: 'Security.title',
+    path: '/',
+  },
+];
