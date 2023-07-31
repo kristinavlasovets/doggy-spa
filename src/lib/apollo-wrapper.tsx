@@ -1,6 +1,5 @@
 'use client';
 
-import { envVariables } from '@/constants';
 import { ApolloClient, ApolloLink, HttpLink } from '@apollo/client';
 import {
   ApolloNextAppProvider,
@@ -9,11 +8,9 @@ import {
   SSRMultipartLink,
 } from '@apollo/experimental-nextjs-app-support/ssr';
 
-const { apolloServerUri } = envVariables;
-
 function makeClient() {
   const httpLink = new HttpLink({
-    uri: apolloServerUri,
+    uri: 'https://apollo-server-v1.vercel.app/graphql',
   });
 
   return new NextSSRApolloClient({
