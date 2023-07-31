@@ -7,9 +7,9 @@ import { useMyTranslation } from '@/app/i18n/client';
 import { socials } from '@/constants/socials';
 import { LanguageContext } from '@/context/LanguageContext';
 
-import CopyrightMenu from '../CopyrightMenu';
 import Newsletter from '../Newsletter';
 
+import CopyrightMenu from './CopyrightMenu';
 import FooterMenu from './FooterMenu';
 import LanguageSwitcher from './LanguageSwitcher';
 import {

@@ -10,10 +10,6 @@ export const Wrapper = styled.header`
   background-color: ${({ theme }) => theme.colors.WHITE};
   font-family: ${({ theme }) => theme.fontFamilies.cormorant};
   color: ${({ theme }) => theme.colors.CHARCOAL};
-
-  @media (max-width: ${({ theme }) => theme.dimensions.tablet}px) {
-    height: fit-content;
-  }
 `;
 
 export const NavBar = styled.div`
@@ -23,8 +19,9 @@ export const NavBar = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.tablet}px) {
-    flex-direction: column;
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    margin-top: ${({ theme }) => theme.margins.xs}px;
+    justify-content: space-evenly;
   }
 `;
 
@@ -35,10 +32,6 @@ export const Banner = styled.div`
   width: ${({ theme }) => theme.width.s}%;
   height: ${({ theme }) => theme.height.xs}px;
   background-color: ${({ theme }) => theme.colors.BEIGE};
-
-  @media (max-width: ${({ theme }) => theme.dimensions.tablet}px) {
-    height: fit-content;
-  }
 `;
 
 export const Message = styled.h5`
@@ -47,6 +40,11 @@ export const Message = styled.h5`
   font-size: ${({ theme }) => theme.fontSizes.s}px;
   font-weight: ${({ theme }) => theme.fontWeights.xl};
   color: ${({ theme }) => theme.colors.CHARCOAL};
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    font-size: ${({ theme }) => theme.fontSizes.xs}px;
+    font-weight: ${({ theme }) => theme.fontWeights.m};
+  }
 `;
 
 export const Icon = styled.div`
@@ -56,9 +54,5 @@ export const Icon = styled.div`
 
   &:hover {
     transform: scale(1.1);
-  }
-
-  @media (max-width: ${({ theme }) => theme.dimensions.tablet}px) {
-    display: none;
   }
 `;

@@ -15,6 +15,7 @@ export interface CommonTheme {
     BEIGE: string;
     PINK: string;
     LIGHT_PINK: string;
+    TRANSLUSENT: string;
   };
   fontWeights: {
     xxs: number;
@@ -90,9 +91,11 @@ export interface CommonTheme {
   opacities: {
     s: number;
     m: number;
+    l: number;
   };
   zIndexes: {
     s: number;
+    m: number;
   };
   top: {
     s: number;

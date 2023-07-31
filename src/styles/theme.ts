@@ -19,6 +19,7 @@ export const commonTheme: CommonTheme = {
     BEIGE: Colors.BEIGE,
     PINK: Colors.PINK,
     LIGHT_PINK: Colors.LIGHT_PINK,
+    TRANSLUSENT: Colors.TRANSLUSENT,
   },
   fontWeights: {
     xxs: 200,
@@ -94,9 +95,11 @@ export const commonTheme: CommonTheme = {
   opacities: {
     s: 0.2,
     m: 0.5,
+    l: 1,
   },
   zIndexes: {
     s: 1000,
+    m: 2000,
   },
   top: {
     s: 100,

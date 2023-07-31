@@ -17,7 +17,7 @@ export const Form = styled.form`
 
 export const Input = styled.input`
   position: relative;
-  width: 337px;
+  width: ${({ theme }) => theme.width.sm}px;
   height: ${({ theme }) => theme.height.ss}px;
   padding: ${({ theme }) => theme.paddings.xs}px;
   background-color: ${({ theme }) => theme.colors.WHITE};
@@ -33,10 +33,14 @@ export const Input = styled.input`
   &:focus {
     border: ${({ theme }) => theme.borders.xxs}px solid ${({ theme }) => theme.colors.LIGHT_PINK};
   }
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    width: ${({ theme }) => theme.width.ssm}px;
+  }
 `;
 
 export const List = styled.ul`
-  width: 337px;
+  width: ${({ theme }) => theme.width.sm}px;
   max-height: 400px;
   position: absolute;
   top: 52px;
@@ -48,6 +52,10 @@ export const List = styled.ul`
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    width: ${({ theme }) => theme.width.ssm}px;
   }
 `;
 
@@ -61,6 +69,11 @@ export const Item = styled.li`
 
   &:hover {
     color: ${({ theme }) => theme.colors.ROSIE};
+  }
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    font-size: ${({ theme }) => theme.fontSizes.xs}px;
+    font-weight: ${({ theme }) => theme.fontWeights.s};
   }
 `;
 

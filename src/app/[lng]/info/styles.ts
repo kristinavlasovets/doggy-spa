@@ -17,6 +17,11 @@ export const Title = styled.h2`
   font-weight: ${({ theme }) => theme.fontWeights.xl};
   color: ${({ theme }) => theme.colors.CHARCOAL};
   text-transform: uppercase;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    font-size: ${({ theme }) => theme.fontSizes.m}px;
+    font-weight: ${({ theme }) => theme.fontWeights.m};
+  }
 `;
 
 export const ImageFrame = styled.div`
@@ -28,10 +33,18 @@ export const ImageFrame = styled.div`
   width: 90%;
   height: 780px;
   background-color: ${({ theme }) => theme.colors.BEIGE};
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    height: ${({ theme }) => theme.height.l}px;
+  }
 `;
 
 export const Image = styled.img`
   aspect-ratio: 9/6;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    width: ${({ theme }) => theme.width.sm}px;
+  }
 `;
 
 export const Breed = styled.h3`
@@ -40,6 +53,11 @@ export const Breed = styled.h3`
   font-size: ${({ theme }) => theme.fontSizes.l}px;
   font-weight: ${({ theme }) => theme.fontWeights.xl};
   color: ${({ theme }) => theme.colors.BLACK};
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    font-size: ${({ theme }) => theme.fontSizes.m}px;
+    font-weight: ${({ theme }) => theme.fontWeights.m};
+  }
 `;
 
 export const BreedInfo = styled.div`
@@ -51,6 +69,13 @@ export const BreedInfo = styled.div`
   width: 90%;
   height: fit-content;
   background-color: transparent;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    margin: ${({ theme }) => theme.margins.xxs}px auto;
+    font-size: ${({ theme }) => theme.fontSizes.m}px;
+    font-weight: ${({ theme }) => theme.fontWeights.m};
+    align-items: center;
+  }
 `;
 
 export const MainStatistics = styled.p`
@@ -59,6 +84,12 @@ export const MainStatistics = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.mmm}px;
   font-weight: ${({ theme }) => theme.fontWeights.xl};
   color: ${({ theme }) => theme.colors.CHARCOAL};
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    margin-top: ${({ theme }) => theme.margins.xxxs}px;
+    font-size: ${({ theme }) => theme.fontSizes.xs}px;
+    font-weight: ${({ theme }) => theme.fontWeights.m};
+  }
 `;
 
 export const Statistics = styled.p`
@@ -67,4 +98,10 @@ export const Statistics = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.mmm}px;
   font-weight: ${({ theme }) => theme.fontWeights.s};
   color: ${({ theme }) => theme.colors.CHARCOAL};
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    margin-top: ${({ theme }) => theme.margins.xxxs}px;
+    font-size: ${({ theme }) => theme.fontSizes.xs}px;
+    font-weight: ${({ theme }) => theme.fontWeights.m};
+  }
 `;

@@ -22,6 +22,10 @@ export const Wrapper = styled.div`
     display: none;
   }
   z-index: ${({ theme }) => theme.zIndexes.s};
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    width: ${({ theme }) => theme.width.smm}px;
+  }
 `;
 
 export const Text = styled.p`

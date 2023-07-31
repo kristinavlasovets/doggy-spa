@@ -7,18 +7,22 @@ export const Wrapper = styled.form`
   justify-content: center;
   align-items: center;
   background-color: transparent;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    margin-top: ${({ theme }) => theme.margins.xs}px;
+    width: ${({ theme }) => theme.width.s}%;
+  }
 `;
 
 export const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: ${({ theme }) => theme.margins.xxxs} auto;
   padding: ${({ theme }) => theme.paddings.xs}px;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.tablet}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
     flex-direction: column;
-    align-items: flex-start;
+    padding: ${({ theme }) => theme.paddings.xxxs}px;
   }
 `;
 
@@ -27,9 +31,18 @@ export const InputContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: ${({ theme }) => theme.width.s}%;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    margin-right: ${({ theme }) => theme.margins.xxxs}px;
+    align-items: center;
+  }
 `;
 
-export const ModalWrapper = styled.div``;
+export const ModalWrapper = styled.div`
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    width: ${({ theme }) => theme.width.ssmm}px;
+  }
+`;
 
 export const InputPaymentWrapper = styled.div`
   display: flex;
@@ -39,9 +52,11 @@ export const InputPaymentWrapper = styled.div`
   margin: ${({ theme }) => theme.margins.xxxs} auto;
   padding: ${({ theme }) => theme.paddings.xs}px;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.tablet}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
     flex-direction: column;
-    align-items: flex-start;
+    width: ${({ theme }) => theme.width.smm}px;
+    align-items: center;
+    padding: ${({ theme }) => theme.paddings.xxxs}px;
   }
 `;
 
@@ -50,17 +65,32 @@ export const InputBlock = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    margin-bottom: ${({ theme }) => theme.margins.xxxs}px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const TimeslotList = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    width: ${({ theme }) => theme.width.ssmm}px;
+  }
 `;
 
 export const Timeslot = styled.div`
   margin-bottom: ${({ theme }) => theme.margins.xxs}px;
   display: flex;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    width: ${({ theme }) => theme.width.ssmm}px;
+  }
 `;
 
 export const Input = styled.input`
@@ -80,6 +110,11 @@ export const Input = styled.input`
 
   &:focus {
     border: ${({ theme }) => theme.borders.xxs}px solid ${({ theme }) => theme.colors.LIGHT_PINK};
+  }
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    margin-left: ${({ theme }) => theme.margins.xxxs}px;
+    width: ${({ theme }) => theme.width.ssmm}px;
   }
 `;
 
@@ -137,6 +172,11 @@ export const Textarea = styled.textarea`
   &:focus {
     border: ${({ theme }) => theme.borders.xxs}px solid ${({ theme }) => theme.colors.LIGHT_PINK};
   }
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    width: ${({ theme }) => theme.width.s}%;
+    margin-top: ${({ theme }) => theme.margins.xxs}px;
+  }
 `;
 
 export const Button = styled.button`
@@ -155,6 +195,10 @@ export const Button = styled.button`
     opacity: ${({ theme }) => theme.opacities.m};
     transform: translateX(10px);
   }
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    width: ${({ theme }) => theme.width.ssmm}px;
+  }
 `;
 
 export const Icons = styled.div`
@@ -166,7 +210,7 @@ export const Icons = styled.div`
   cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
-    width: ${({ theme }) => theme.width.s}px;
+    width: ${({ theme }) => theme.width.ssmm}px;
   }
 `;
 
@@ -179,6 +223,10 @@ export const Note = styled.p`
 
   &:hover {
     color: ${({ theme }) => theme.colors.PINK};
+  }
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    width: ${({ theme }) => theme.width.ssmm}px;
   }
 `;
 

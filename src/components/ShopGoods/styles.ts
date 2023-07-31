@@ -20,6 +20,12 @@ export const Main = styled.section`
   width: 95%;
   height: fit-content;
   background-color: transparent;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    height: fit-content;
+    display: block;
+    margin-left: 75px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -31,6 +37,10 @@ export const Title = styled.h2`
   color: ${({ theme }) => theme.colors.CHARCOAL};
 
   z-index: ${({ theme }) => theme.zIndexes.s};
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    margin-top: ${({ theme }) => theme.margins.s}px;
+  }
 `;
 
 export const Button = styled(Link)`

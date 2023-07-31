@@ -13,4 +13,5 @@ export const icons = {
   mastercard: <Image src="/assets/icons/mastercard.svg" alt="mastercard" width={30} height={20} />,
   visa: <Image src="/assets/icons/visa.svg" alt="visa" width={30} height={20} />,
   amazon: <Image src="/assets/icons/amazon.svg" alt="amazon" width={30} height={20} />,
+  burger: <Image src="/assets/icons/burger.svg" alt="amazon" width={50} height={50} />,
 };

@@ -7,6 +7,10 @@ export const Wrapper = styled.div`
   align-items: flex-start;
   width: 25%;
   height: fit-content;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    width: ${({ theme }) => theme.width.ssm}px;
+  }
 `;
 
 export const Title = styled.p`
@@ -23,6 +27,11 @@ export const Price = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.s}px;
   font-weight: ${({ theme }) => theme.fontWeights.l};
   color: ${({ theme }) => theme.colors.CHARCOAL};
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    margin-top: ${({ theme }) => theme.margins.xxxs}px;
+    margin-bottom: ${({ theme }) => theme.margins.xs}px;
+  }
 `;
 
 export const Image = styled.img`

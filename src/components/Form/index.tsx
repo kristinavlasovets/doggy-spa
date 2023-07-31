@@ -13,9 +13,8 @@ import { setItemToLocalStorage } from '@/utils/setItemToLocalStorage';
 import { formSchema } from '@/utils/validationSchemas';
 import { yupResolver } from '@hookform/resolvers/yup';
 
-import Modal from '../Modal';
-import Portal from '../Portal';
-
+import Modal from './Modal';
+import Portal from './Portal';
 import {
   Button,
   Checkbox,
@@ -157,7 +156,6 @@ const Form: FC = () => {
           </InputBlock>
           <Textarea placeholder={t('BookAppointment.textarea')} />
         </InputWrapper>
-
         <InputPaymentWrapper>
           <Title>{t('BookAppointment.payment')}</Title>
           <InputBlock>

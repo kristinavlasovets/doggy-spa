@@ -28,6 +28,13 @@ export const Title = styled.h2`
   color: ${({ theme }) => theme.colors.CHARCOAL};
 
   z-index: ${({ theme }) => theme.zIndexes.s};
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    left: 20px;
+    width: ${({ theme }) => theme.width.ss}px;
+    font-size: ${({ theme }) => theme.fontSizes.xs}px;
+    font-weight: ${({ theme }) => theme.fontWeights.m};
+  }
 `;
 
 export const Button = styled(Link)`
@@ -51,5 +58,12 @@ export const Button = styled(Link)`
   &:hover {
     opacity: ${({ theme }) => theme.opacities.m};
     transform: translateX(10px);
+  }
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    top: 195px;
+    width: ${({ theme }) => theme.width.ss}px;
+    height: ${({ theme }) => theme.height.xss}px;
+    font-size: ${({ theme }) => theme.fontSizes.xxs}px;
+    font-weight: ${({ theme }) => theme.fontWeights.m};
   }
 `;

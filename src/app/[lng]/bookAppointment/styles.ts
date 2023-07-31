@@ -45,6 +45,13 @@ export const Title = styled.h2`
   color: ${({ theme }) => theme.colors.WHITE};
 
   z-index: ${({ theme }) => theme.zIndexes.s};
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    left: 20px;
+    width: ${({ theme }) => theme.width.ss}px;
+    font-size: ${({ theme }) => theme.fontSizes.xs}px;
+    font-weight: ${({ theme }) => theme.fontWeights.m};
+  }
 `;
 
 export const Main = styled.div`
@@ -56,6 +63,13 @@ export const Main = styled.div`
   height: fit-content;
   padding: ${({ theme }) => theme.paddings.xs}px;
   background-color: transparent;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    margin-top: ${({ theme }) => theme.margins.xs}px;
+    padding: ${({ theme }) => theme.paddings.xxxs}px;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Booking = styled.div`
@@ -65,6 +79,11 @@ export const Booking = styled.div`
   align-items: flex-start;
   padding: ${({ theme }) => theme.paddings.xs}px;
   background-color: transparent;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    padding: ${({ theme }) => theme.paddings.xxxs}px;
+    align-items: center;
+  }
 `;
 
 export const Subtitle = styled.h5`
@@ -77,12 +96,17 @@ export const Subtitle = styled.h5`
 
 export const InfoWrapper = styled.div`
   margin: ${({ theme }) => theme.margins.xxxs} auto;
-  width: 455px;
+  width: ${({ theme }) => theme.width.smmm}px;
   padding: ${({ theme }) => theme.paddings.xs}px;
   display: flex;
   justify-content: space-between;
-
   white-space: pre-wrap;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    width: ${({ theme }) => theme.width.smm}px;
+    padding: ${({ theme }) => theme.paddings.xxs}px;
+    justify-content: space-evenly;
+  }
 `;
 
 export const AddressInfo = styled.p`
@@ -115,4 +139,9 @@ export const MapWrapper = styled.section`
   width: 465px;
   height: 465px;
   border: ${({ theme }) => theme.borders.s}px solid ${({ theme }) => theme.colors.BEIGE};
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    width: 342px;
+    height: 340px;
+  }
 `;

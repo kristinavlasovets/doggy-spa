@@ -15,9 +15,10 @@ export const Form = styled.div<FormProps>`
   padding: ${({ theme }) => theme.paddings.xs}px;
   width: ${({ theme, signUpVariant }) => (signUpVariant ? theme.width.ssmm : '')}px;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.tablet}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    padding: ${({ theme }) => theme.paddings.xxxs}px;
   }
 `;
 
@@ -51,6 +52,12 @@ export const Main = styled.section<FormProps>`
   display: flex;
   flex-direction: ${({ signUpVariant }) => (signUpVariant ? 'column' : '')};
   justify-content: space-evenly;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const InputWrapper = styled.div<FormProps>`
@@ -59,14 +66,10 @@ export const InputWrapper = styled.div<FormProps>`
   margin-bottom: ${({ theme, signUpVariant }) => (signUpVariant ? theme.margins.xs : '')}px;
   width: ${({ theme, signUpVariant }) => (signUpVariant ? theme.width.ssmm : theme.width.m)}px;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.tablet}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
     margin: ${({ theme }) => theme.margins.xxxs} auto;
     width: ${({ theme }) => theme.width.ssm}px;
-    max-width: ${({ theme }) => theme.width.s}%;
-  }
-
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
-    width: fit-content;
+    max-width: ${({ theme }) => theme.width.ssm}px;
   }
 `;
 
@@ -89,6 +92,12 @@ export const Input = styled.input<FormProps>`
   &:focus {
     border: ${({ theme }) => theme.borders.xxs}px solid ${({ theme }) => theme.colors.LIGHT_PINK};
   }
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    margin: ${({ theme }) => theme.margins.xxs}px auto;
+    width: ${({ theme }) => theme.width.ssm}px;
+    max-width: ${({ theme }) => theme.width.ssm}px;
+  }
 `;
 
 export const Button = styled.button`
@@ -110,7 +119,7 @@ export const Button = styled.button`
     transform: translateX(-10px);
   }
 
-  @media (max-width: ${({ theme }) => theme.dimensions.tablet}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
     margin: ${({ theme }) => theme.margins.xxxs} auto;
     width: ${({ theme }) => theme.width.ssm}px;
     max-width: ${({ theme }) => theme.width.ssss}px;

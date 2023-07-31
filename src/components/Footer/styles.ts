@@ -9,6 +9,10 @@ export const Wrapper = styled.footer`
   width: ${({ theme }) => theme.width.s}%;
   height: 485px;
   background-color: ${({ theme }) => theme.colors.BEIGE};
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    height: fit-content;
+  }
 `;
 
 export const Pattern = styled.div`
@@ -26,6 +30,13 @@ export const Main = styled.div`
   height: ${({ theme }) => theme.height.l}px;
   padding: ${({ theme }) => theme.paddings.xs}px;
   background-color: transparent;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    height: fit-content;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: ${({ theme }) => theme.paddings.xs}px;
+  }
 `;
 
 export const Connection = styled.div`
@@ -36,6 +47,10 @@ export const Connection = styled.div`
   align-items: flex-start;
   padding: ${({ theme }) => theme.paddings.xs}px;
   background-color: transparent;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    align-items: center;
+  }
 `;
 
 export const Text = styled.p`
@@ -50,6 +65,14 @@ export const Copyright = styled.div`
   width: ${({ theme }) => theme.width.s}%;
   height: ${({ theme }) => theme.height.xs}px;
   background-color: ${({ theme }) => theme.colors.ROSEY};
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    padding-top: ${({ theme }) => theme.paddings.xs}px;
+    padding-bottom: ${({ theme }) => theme.paddings.xs}px;
+    height: fit-content;
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const Title = styled.h5`
@@ -58,6 +81,11 @@ export const Title = styled.h5`
   font-size: ${({ theme }) => theme.fontSizes.s}px;
   font-weight: ${({ theme }) => theme.fontWeights.xl};
   color: ${({ theme }) => theme.colors.CHARCOAL};
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    margin: ${({ theme }) => theme.margins.xxxs} auto;
+    text-align: center;
+  }
 `;
 
 export const Icons = styled.div`
@@ -69,7 +97,8 @@ export const Icons = styled.div`
   cursor: pointer;
 
   @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
-    width: ${({ theme }) => theme.width.s}px;
+    width: ${({ theme }) => theme.width.ssmm}px;
+    padding: ${({ theme }) => theme.paddings.xs}px ${({ theme }) => theme.paddings.xxxs}px;
   }
 `;
 

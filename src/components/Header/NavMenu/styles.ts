@@ -13,7 +13,7 @@ export const Nav = styled.nav`
   font-family: ${({ theme }) => theme.fontFamilies.cormorant};
   color: ${({ theme }) => theme.colors.CHARCOAL};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.tablet}) {
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
     display: none;
   }
 `;
@@ -34,5 +34,25 @@ export const LinkItem = styled(Link)<LinkItemProps>`
   &:hover {
     color: ${({ theme }) => theme.colors.BRONZED};
     transform: translateY(-3px);
+  }
+`;
+
+export const Burger = styled.button`
+  display: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
   }
 `;
