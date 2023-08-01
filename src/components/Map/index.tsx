@@ -6,7 +6,7 @@ import { Marker, Popup, TileLayer } from 'react-leaflet';
 
 import { coordinates, envVariables } from '@/constants';
 
-import { MapContainerWrapper } from './styles';
+import { Label, MapContainerWrapper } from './styles';
 
 import 'leaflet/dist/leaflet.css';
 
@@ -26,7 +26,7 @@ const Map: FC = () => (
     {coordinates.map(({ gps, popUp }) => (
       <Marker position={gps as LatLngExpression} icon={icon} key={popUp}>
         <Popup>
-          <p>{popUp}</p>
+          <Label>{popUp}</Label>
         </Popup>
       </Marker>
     ))}

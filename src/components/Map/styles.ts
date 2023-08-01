@@ -10,3 +10,10 @@ export const MapContainerWrapper = styled(MapContainer)`
     height: ${({ theme }) => theme.height.m}px;
   }
 `;
+
+export const Label = styled.p`
+  font-family: ${({ theme }) => theme.fontFamilies.cormorant};
+  font-size: ${({ theme }) => theme.fontSizes.xs}px;
+  font-weight: ${({ theme }) => theme.fontWeights.m};
+  color: ${({ theme }) => theme.colors.CHARCOAL};
+`;

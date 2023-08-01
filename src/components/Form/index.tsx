@@ -5,8 +5,7 @@ import dynamic from 'next/dynamic';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 import { useMyTranslation } from '@/app/i18n/client';
-import { timeslots } from '@/constants';
-import { paymentMethods } from '@/constants/paymentMethods';
+import { paymentMethods, timeslots } from '@/constants';
 import { useOnClickOutside } from '@/hooks/useOnClickOutside';
 import { checkIsDateValid } from '@/utils/checkIsDateValid';
 import { setItemToLocalStorage } from '@/utils/setItemToLocalStorage';

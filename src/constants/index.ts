@@ -4,5 +4,6 @@ export * from './envVariables';
 export * from './goodsAssortment';
 export * from './icons';
 export * from './navMenu';
+export * from './paymentMethods';
 export * from './regularExpressions';
 export * from './timeslots';

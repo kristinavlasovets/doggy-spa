@@ -1,9 +1,6 @@
 export interface CommonTheme {
   dimensions: {
     mobile: number;
-    tablet: number;
-    laptop: number;
-    bigScreen: number;
   };
   colors: {
     WHITE: string;

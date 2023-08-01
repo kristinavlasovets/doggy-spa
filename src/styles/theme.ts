@@ -5,9 +5,6 @@ import { CommonTheme } from './types';
 export const commonTheme: CommonTheme = {
   dimensions: {
     mobile: 495,
-    tablet: 768,
-    laptop: 1024,
-    bigScreen: 1920,
   },
   colors: {
     WHITE: Colors.WHITE,

@@ -8,6 +8,7 @@ import { GET_BY_BREED } from '@/graphql/queries';
 import { DogInfo } from '@/types';
 import { useSuspenseQuery } from '@apollo/experimental-nextjs-app-support/ssr';
 
+import { initialBreed } from './config';
 import {
   Breed,
   BreedInfo,
@@ -20,7 +21,7 @@ import {
 } from './styles';
 
 const Info: FC = () => {
-  const [chosenBreed, setChosenBreed] = useState<string>('labrador');
+  const [chosenBreed, setChosenBreed] = useState<string>(initialBreed);
 
   const { t } = useMyTranslation();
 
@@ -32,7 +33,7 @@ const Info: FC = () => {
   );
 
   const { data }: DogInfo = useSuspenseQuery(GET_BY_BREED, {
-    variables: { name: chosenBreed || 'poodle' },
+    variables: { name: chosenBreed || initialBreed },
   });
 
   return (
