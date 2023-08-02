@@ -1,34 +1,83 @@
 'use client';
 
-import React, { FC } from 'react';
+import React, { FC, Fragment, useCallback, useEffect, useState } from 'react';
 
 import { useMyTranslation } from '@/app/i18n/client';
-import { Dog, PageProps } from '@/types';
-import { gql } from '@apollo/client';
+import SearchInput from '@/components/SearchInput';
+import { GET_BY_BREED } from '@/graphql/queries';
+import { DogInfo } from '@/types';
+import { getItemFromLocalStorage } from '@/utils';
 import { useSuspenseQuery } from '@apollo/experimental-nextjs-app-support/ssr';
 
-import { Title } from './styles';
+import { initialBreed } from './config';
+import {
+  Breed,
+  BreedInfo,
+  Image,
+  ImageFrame,
+  MainStatistics,
+  Statistics,
+  Title,
+  Wrapper,
+} from './styles';
 
-const query = gql`
-  query {
-    breed(type: "poodle") {
-      message
-      status
-    }
-  }
-`;
+const Info: FC = () => {
+  const [chosenBreed, setChosenBreed] = useState<string>('');
 
-const Info: FC<PageProps> = () => {
   const { t } = useMyTranslation();
 
-  const { data }: Dog = useSuspenseQuery(query);
+  const handleChooseBreed = useCallback(
+    (breed: string) => () => {
+      setChosenBreed(breed);
+    },
+    []
+  );
+
+  useEffect(() => {
+    setChosenBreed(getItemFromLocalStorage('chosenBreed') || initialBreed);
+  }, []);
+
+  const { data }: DogInfo = useSuspenseQuery(GET_BY_BREED, {
+    variables: { name: chosenBreed || initialBreed },
+  });
 
   return (
-    <div>
-      <Title>{t('Info.title')}</Title>
-      <img src={data.breed.message} alt="dog" />
-      <p>{data.breed.status}</p>
-    </div>
+    <Wrapper>
+      <Title>{t('Info.header')}</Title>
+      <SearchInput handleChooseBreed={handleChooseBreed} />
+      {data.getByBreed &&
+        data.getByBreed.map(
+          ({
+            image_link,
+            name,
+            energy,
+            min_life_expectancy,
+            good_with_strangers,
+            good_with_other_dogs,
+          }) => (
+            <Fragment key={image_link}>
+              <ImageFrame>
+                <Image src={image_link} alt="dog" />
+                <Breed>{name}</Breed>
+              </ImageFrame>
+              <BreedInfo>
+                <MainStatistics>
+                  {t('Info.energy')} {energy}
+                </MainStatistics>
+                <Statistics>
+                  {t('Info.lifeExpectancy')} {min_life_expectancy}
+                </Statistics>
+                <Statistics>
+                  {t('Info.withStrangers')} {good_with_strangers}
+                </Statistics>
+                <Statistics>
+                  {t('Info.withDogs')} {good_with_other_dogs}
+                </Statistics>
+              </BreedInfo>
+            </Fragment>
+          )
+        )}
+    </Wrapper>
   );
 };
 export default Info;

@@ -1,19 +1,18 @@
 export interface CommonTheme {
   dimensions: {
-    mobile: number;
-    tablet: number;
     laptop: number;
-    bigScreen: number;
   };
   colors: {
     WHITE: string;
     BLACK: string;
     CHARCOAL: string;
+    GRAY: string;
     BRONZED: string;
     ROSEY: string;
     BEIGE: string;
     PINK: string;
     LIGHT_PINK: string;
+    CRIMSON: string;
   };
   fontWeights: {
     xxs: number;
@@ -41,23 +40,63 @@ export interface CommonTheme {
     tangerine: string;
   };
   width: {
-    xs: number;
-    s: number;
-  };
-  height: {
     xxs: number;
     xs: number;
     s: number;
+    ss: number;
+    ssss: number;
+    ssm: number;
+    ssmm: number;
+    sm: number;
+    smm: number;
+    smmm: number;
+    sss: number;
+    m: number;
+    mm: number;
+    l: number;
+  };
+  height: {
+    xxs: number;
+    xss: number;
+    xs: number;
+    ss: number;
+    sm: number;
+    s: number;
+    m: number;
     l: number;
     xl: number;
   };
   margins: {
     xxxs: number;
+    xxs: number;
     xs: number;
     s: number;
   };
   paddings: {
-    xxxs: 0;
-    xs: 25;
+    xxxs: number;
+    xxs: number;
+    xs: number;
+  };
+  borders: {
+    xxs: number;
+    xs: number;
+    s: number;
+  };
+  borderRadiuses: {
+    s: number;
+    m: number;
+    l: number;
+  };
+  opacities: {
+    s: number;
+    m: number;
+    l: number;
+  };
+  zIndexes: {
+    s: number;
+    m: number;
+  };
+  top: {
+    s: number;
   };
 }

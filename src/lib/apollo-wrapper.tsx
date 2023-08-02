@@ -10,8 +10,7 @@ import {
 
 function makeClient() {
   const httpLink = new HttpLink({
-    // https://studio.apollographql.com/public/spacex-l4uc6p/
-    uri: 'https://doggos-api.netlify.app/',
+    uri: 'https://apollo-server-v1.vercel.app/graphql',
   });
 
   return new NextSSRApolloClient({

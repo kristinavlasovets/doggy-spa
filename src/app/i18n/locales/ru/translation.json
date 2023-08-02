@@ -1,12 +1,52 @@
 {
   "Home.title": "Главная",
   "Home.banner": "Получите СКИДКУ 20% при бронировании дня Спа для Вашего Животного сегодня!",
+  "Home.subtitleOne": "Ваша собака бесится в грязи?",
+  "Home.subtitleTwo": "Забронируйте спа-день для своей собаки!",
+  "Home.newsletterTitle": "Подпишитесь на новостную рассылку Bark",
+  "Home.newsletterSubtitle": "Получите скидку 10% на первую спа-процедуру",
+  "Home.newsletterButton": "Подписаться",
+  "Home.newsletterNote": "*Заполняя эту форму, вы подписываетесь на получение наших электронных писем и можете отказаться от подписки в любое время.",
+  "Home.brand": "Спа для Животных Luxe",
+  "Home.collarsTitle": "Ошейники для собак",
+  "Home.collarsOne": "Кожаные ошейники для собак с золотой именной биркой",
+  "Home.collarsTwo": "Ошейник для собак с инкрустацией розовыми и белыми бриллиантами",
+  "Home.collarsThree": "Ошейник с большим серебряным бриллиантом 3000 карат",
+  "Home.collarsButton": "Смотреть еще",
+  "Home.carryOnsTitle": "Переноски для животных",
+  "Home.carryOnsOne": "Кожаная переноска для собак с золотой именной биркой",
+  "Home.carryOnsButton": "Смотреть еще",
 
   "Info.title": "Информация",
+  "Info.header": "Информация о собаке",
+  "Info.energy": "Энергия: ",
+  "Info.lifeExpectancy": "Минимальная продолжительность жизни: ",
+  "Info.withStrangers": "Хорошо ладит с незнакомцами: ",
+  "Info.withDogs": "Хорошо ладит с другими собаками: ",
+  "Info.searchPlaceholder": "Поиск",
+  "Info.noResults": "Такой породы не найдено",
+  "Info.notValidInput": "Введите название породы на английском языке",
 
   "SpaServices.title": "Спа Услуги",
 
-  "BookAppointment.title": "Записаться на прием",
+  "BookAppointment.title": "Записаться на Прием",
+  "BookAppointment.subtitle": "Запишитесь на прием к нашему специалисту по грумингу уже сегодня!",
+  "BookAppointment.informationSubtitle": "Введите свою информацию здесь",
+  "BookAppointment.firstName": "Имя",
+  "BookAppointment.lastName": "Фамилия",
+  "BookAppointment.email": "Email",
+  "BookAppointment.phone": "Номер телефона",
+  "BookAppointment.timeslot": "Выберите временной интервал на ",
+  "BookAppointment.textarea": "Любые особые пожелания для вашего(их) питомца(ов)...",
+  "BookAppointment.payment": "Введите информацию о платеже",
+  "BookAppointment.creditCard": "Номер Кредитной Карты",
+  "BookAppointment.expiryDate": "Срок Действия",
+  "BookAppointment.cvv": "CVV",
+  "BookAppointment.nameOnCard": "Имя на Карте",
+  "BookAppointment.note": "Обратите внимание, что при отмене в течение 24 часов до запланированной встречи взимается плата за отмену в размере 300,00 долларов США.",
+  "BookAppointment.bookButton": "Записаться на Прием",
+  "BookAppointment.address": "Our Address:\nLuxe Animal Spa\n80 Smithe St\nVancouver, BC\nV6B 1M7",
+  "BookAppointment.operations": "Hours of Operation:\nSunday - Closed\nMonday 10 a.m.-5:30 p.m.\nTuesday 10 a.m.-5:30 p.m.\nWednesday 10 a.m.-5:30 p.m.\nThursday 10 a.m.-5:30 p.m.\nFriday 10 a.m.-5:30 p.m.\nSaturday 10 a.m.-5:30 p.m.",
 
   "Blog.title": "Блог",
 
@@ -26,5 +66,28 @@
 
   "PaymentOptions.title": "Способ оплаты",
 
-  "Footer.button": "Подписаться"
+  "CookiePolicy.title": "Политика файлов Cookie",
+
+  "CookiesSettings.title": "Настройки файлов Cookie",
+
+  "Terms.title": "Правила",
+
+  "Privacy.title": "Конфиденциальность",
+
+  "Security.title": "Безопасность",
+
+  "Copyright.text": "Copyright 2021 ООО «Люкс Анимал Спа». Все права защищены.",
+
+  "CustomerService.title": "Служба поддержки",
+
+  "Newsletter.title": "Подпишитесь на нашу рассылку",
+  "Newsletter.placeholder": "Email",
+  "Newsletter.button": "Подписаться",
+
+  "Socials.title": "Присоединяйтесь к нам в социальных сетях",
+
+  "Navigation.title": "Навигация",
+
+  "Footer.button": "Подписаться",
+  "Footer.subscribedAlert": "Вы только что подписались на нашу рассылку!"
 }

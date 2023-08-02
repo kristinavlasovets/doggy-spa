@@ -1,31 +1,35 @@
+import { pathes } from './pathes';
+
+const { home, info, spaServices, bookAppointment, blog, aboutUs, contactUs } = pathes;
+
 export const headerNavMenu = [
   {
     name: 'Home.title',
-    path: '/',
+    path: home,
   },
   {
     name: 'Info.title',
-    path: '/info',
+    path: info,
   },
   {
     name: 'SpaServices.title',
-    path: '/spaServices',
+    path: spaServices,
   },
   {
     name: 'BookAppointment.title',
-    path: '/bookAppointment',
+    path: bookAppointment,
   },
   {
     name: 'Blog.title',
-    path: '/blog',
+    path: blog,
   },
   {
     name: 'AboutUs.title',
-    path: '/aboutUs',
+    path: aboutUs,
   },
   {
     name: 'ContactUs.title',
-    path: '/contactUs',
+    path: contactUs,
   },
 ];
 
@@ -71,6 +75,32 @@ export const footerServiceMenu = [
   },
   {
     name: 'PaymentOptions.title',
+    path: '/',
+  },
+];
+
+export const footerCopyrightCookieMenu = [
+  {
+    name: 'CookiePolicy.title',
+    path: '/',
+  },
+  {
+    name: 'CookiesSettings.title',
+    path: '/',
+  },
+];
+
+export const footerCopyrightTermsMenu = [
+  {
+    name: 'Terms.title',
+    path: '/',
+  },
+  {
+    name: 'Privacy.title',
+    path: '/',
+  },
+  {
+    name: 'Security.title',
     path: '/',
   },
 ];

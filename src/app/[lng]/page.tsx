@@ -2,19 +2,18 @@
 
 import React, { FC } from 'react';
 
-import { PageProps } from '@/types';
+import HomeHeader from '@/components/HomeHeader';
+import ShopGoods from '@/components/ShopGoods';
+import SignUp from '@/components/SignUp';
 
-import { useMyTranslation } from '../i18n/client';
+import { Wrapper } from './styles';
 
-import { Title, Wrapper } from './styles';
-
-const Home: FC<PageProps> = () => {
-  const { t } = useMyTranslation();
-
-  return (
-    <Wrapper>
-      <Title>{t('Home.title')}</Title>
-    </Wrapper>
-  );
-};
+const Home: FC = () => (
+  <Wrapper>
+    <HomeHeader />
+    <SignUp />
+    <ShopGoods variant="collars" />
+    <ShopGoods variant="carryOns" />
+  </Wrapper>
+);
 export default Home;

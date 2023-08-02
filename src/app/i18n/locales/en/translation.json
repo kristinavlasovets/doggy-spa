@@ -1,12 +1,52 @@
 {
   "Home.title": "Home",
   "Home.banner": "Get 20% OFF When You Book A Spa Day For Your Animal Today!",
+  "Home.subtitleOne": "Your dog running amok in the dirt?",
+  "Home.subtitleTwo": "Book your doggy spa day!",
+  "Home.newsletterTitle": "Sign Up to Bark Newsletter",
+  "Home.newsletterSubtitle": "Get 10% Off Your First Spa Treatment",
+  "Home.newsletterButton": "Sign Up",
+  "Home.newsletterNote": "*By completing this form you are signing up to receive our emails and can unsubscribe at any time.",
+  "Home.brand": "Luxe Animal Spa",
+  "Home.collarsTitle": "Dog Collars",
+  "Home.collarsOne": "Leather Dog Collars with Gold Name Tag",
+  "Home.collarsTwo": "Pink & White Diamond Encrusted Dog Collar",
+  "Home.collarsThree": "Large 3000kt Silver Diamond Collar",
+  "Home.collarsButton": "See More Dog Collars",
+  "Home.carryOnsTitle": "Animal Carry Ons",
+  "Home.carryOnsOne": "Leather Dog Carry On with Gold Name Tag",
+  "Home.carryOnsButton": "See More Carry Ons",
 
   "Info.title": "Info",
+  "Info.header": "Info Dog",
+  "Info.energy": "Energy: ",
+  "Info.lifeExpectancy": "Min life expectancy: ",
+  "Info.withStrangers": "Good with strangers: ",
+  "Info.withDogs": "Good with other dogs: ",
+  "Info.searchPlaceholder": "Search",
+  "Info.noResults": "No such breed",
+  "Info.notValidInput": "Enter the breed name in English",
 
   "SpaServices.title": "Spa Services",
 
   "BookAppointment.title": "Book Appointment",
+  "BookAppointment.subtitle": "Book An Appointment With Our Groom Specialist Today!",
+  "BookAppointment.informationSubtitle": "Enter your information here",
+  "BookAppointment.firstName": "First name",
+  "BookAppointment.lastName": "Last name",
+  "BookAppointment.email": "Email",
+  "BookAppointment.phone": "Phone number",
+  "BookAppointment.timeslot": "Choose a timeslot on ",
+  "BookAppointment.textarea": "Any special requests for your pet(s)...",
+  "BookAppointment.payment": "Enter your payment information",
+  "BookAppointment.creditCard": "Credit Card Number",
+  "BookAppointment.expiryDate": "Expiry Date",
+  "BookAppointment.cvv": "CVV",
+  "BookAppointment.nameOnCard": "Name on Card",
+  "BookAppointment.note": "Please be advised cancelling within 24 hours of your scheduled appointment will result in a cancellation fee of $300.00.",
+  "BookAppointment.bookButton": "Book Appointment",
+  "BookAppointment.address": "Our Address:\nLuxe Animal Spa\n80 Smithe St\nVancouver, BC\nV6B 1M7",
+  "BookAppointment.operations": "Hours of Operation:\nSunday - Closed\nMonday 10 a.m.-5:30 p.m.\nTuesday 10 a.m.-5:30 p.m.\nWednesday 10 a.m.-5:30 p.m.\nThursday 10 a.m.-5:30 p.m.\nFriday 10 a.m.-5:30 p.m.\nSaturday 10 a.m.-5:30 p.m.",
 
   "Blog.title": "Blog",
 
@@ -26,5 +66,28 @@
 
   "PaymentOptions.title": "Payment Options",
 
-  "Footer.button": "Submit"
+  "CookiePolicy.title": "Cookie Policy",
+
+  "CookiesSettings.title": "Cookies Settings",
+
+  "Terms.title": "Terms",
+
+  "Privacy.title": "Privacy",
+
+  "Security.title": "Security",
+
+  "Copyright.text": "Copyright 2021 Luxe Animal Spa, LLC. All rights reserved.",
+
+  "CustomerService.title": "Customer Service",
+
+  "Newsletter.title": "Subscribe to our Newsletter",
+  "Newsletter.placeholder": "Email",
+  "Newsletter.button": "Submit",
+
+  "Socials.title": "Connect With Us On Social Media",
+
+  "Navigation.title": "Navigation",
+
+  "Footer.button": "Submit",
+  "Footer.subscribedAlert": "You've just subscribed to our newsletter!"
 }

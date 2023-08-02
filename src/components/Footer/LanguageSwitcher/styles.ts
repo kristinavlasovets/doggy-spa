@@ -18,4 +18,10 @@ export const Switcher = styled.div`
   &:hover {
     transform: scale(1.1);
   }
+
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
+    margin-left: ${({ theme }) => theme.margins.xxxs}px;
+    padding: ${({ theme }) => theme.paddings.xs}px;
+    width: ${({ theme }) => theme.width.ss}px;
+  }
 `;

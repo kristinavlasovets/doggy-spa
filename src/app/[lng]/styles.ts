@@ -1,9 +1,11 @@
 import { styled } from 'styled-components';
 
 export const Wrapper = styled.div`
+  margin: ${({ theme }) => theme.margins.xxxs} auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: ${({ theme }) => theme.width.s}%;
-`;
-
-export const Title = styled.h1`
-  color: ${({ theme }) => theme.colors.BRONZED};
+  background-color: transparent;
 `;
