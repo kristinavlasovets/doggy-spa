@@ -8,6 +8,8 @@ module.exports = {
     '^.+\\.(png|jpg|jpeg|gif|webp|avif|ico|bmp|svg)$': `<rootDir>/__mocks__/fileMock.js`,
 
     '^@/(.*)$': '<rootDir>/src/$1',
+
+    '^storybook-lib/(.*)$': '<rootDir>/src/storybook-lib/$1',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testPathIgnorePatterns: ['<rootDir>/node_modules/', '<rootDir>/.next/'],

@@ -1,4 +1,5 @@
 import React from 'react';
+import ShopGoodsItem from 'storybook-lib/ShopGoodsItem';
 import { ThemeProvider } from 'styled-components';
 
 import { LanguageContextProvider } from '@/context/LanguageContext';
@@ -6,7 +7,6 @@ import { commonTheme } from '@/styles/theme';
 import { render, screen } from '@testing-library/react';
 
 import { ShopGoodsItemProps } from './types';
-import ShopGoodsItem from '.';
 
 const props: ShopGoodsItemProps = {
   name: 'Home.collarsOne',

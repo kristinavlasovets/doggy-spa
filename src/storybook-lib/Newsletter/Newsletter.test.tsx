@@ -1,10 +1,9 @@
 import React from 'react';
+import Newsletter from 'storybook-lib/Newsletter';
 import { ThemeProvider } from 'styled-components';
 
 import { commonTheme } from '@/styles/theme';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-
-import Newsletter from '.';
 
 describe('Newsletter', () => {
   it('shows a warning message when trying to send invalid data', async () => {
