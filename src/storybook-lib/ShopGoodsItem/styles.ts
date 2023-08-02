@@ -4,12 +4,13 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  width: 25%;
+  align-items: center;
+  width: ${({ theme }) => theme.width.smmm}px;
   height: fit-content;
 
   @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: ${({ theme }) => theme.width.ssm}px;
+    align-items: flex-start;
   }
 `;
 

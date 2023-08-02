@@ -17,7 +17,8 @@ export const Main = styled.section`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 95%;
+  width: ${({ theme }) => theme.width.s}%;
+  max-width: ${({ theme }) => theme.width.l}px;
   height: fit-content;
   background-color: transparent;
 

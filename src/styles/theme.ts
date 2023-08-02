@@ -46,7 +46,6 @@ export const commonTheme: CommonTheme = {
   width: {
     xxs: 24,
     xs: 72,
-    xss: 90,
     s: 100,
     ss: 128,
     ssss: 180,
@@ -58,6 +57,7 @@ export const commonTheme: CommonTheme = {
     sss: 478,
     m: 498,
     mm: 751,
+    l: 1280,
   },
   height: {
     xxs: 12,

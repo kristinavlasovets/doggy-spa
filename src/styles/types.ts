@@ -42,7 +42,6 @@ export interface CommonTheme {
   width: {
     xxs: number;
     xs: number;
-    xss: number;
     s: number;
     ss: number;
     ssss: number;
@@ -54,6 +53,7 @@ export interface CommonTheme {
     sss: number;
     m: number;
     mm: number;
+    l: number;
   };
   height: {
     xxs: number;

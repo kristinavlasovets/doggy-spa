@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
   align-items: center;
   width: ${({ theme }) => theme.width.s}%;
   background-color: transparent;
+
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
+    padding: ${({ theme }) => `${theme.paddings.xxxs}px ${theme.paddings.xs}px`};
+  }
 `;
 
 export const Title = styled.h2`
@@ -30,7 +34,8 @@ export const ImageFrame = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: ${({ theme }) => theme.width.xss}%;
+  width: ${({ theme }) => theme.width.s}%;
+  max-width: ${({ theme }) => theme.width.l}px;
   height: 780px;
   background-color: ${({ theme }) => theme.colors.BEIGE};
 
@@ -40,10 +45,14 @@ export const ImageFrame = styled.div`
 `;
 
 export const Image = styled.img`
-  aspect-ratio: 9/6;
-
   @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: ${({ theme }) => theme.width.sm}px;
+  }
+
+  @media (max-width: 425px) {
+    width: ${({ theme }) => theme.width.s}%;
+    height: auto;
+    padding: ${({ theme }) => `${theme.paddings.xxxs}px ${theme.paddings.xs}px`};
   }
 `;
 
@@ -66,7 +75,8 @@ export const BreedInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: ${({ theme }) => theme.width.xss}%;
+  width: ${({ theme }) => theme.width.s}%;
+  max-width: ${({ theme }) => theme.width.l}px;
   height: fit-content;
   background-color: transparent;
 

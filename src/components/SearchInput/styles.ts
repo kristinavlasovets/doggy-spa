@@ -3,7 +3,8 @@ import { styled } from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
-  width: ${({ theme }) => theme.width.xss}%;
+  width: ${({ theme }) => theme.width.s}%;
+  max-width: ${({ theme }) => theme.width.l}px;
   justify-content: flex-end;
   align-items: flex-end;
 `;
