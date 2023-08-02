@@ -10,7 +10,7 @@ export const Nav = styled.nav`
   height: fit-content;
   background-color: transparent;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.tablet}) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}) {
     display: none;
   }
 `;

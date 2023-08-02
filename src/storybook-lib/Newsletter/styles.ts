@@ -15,7 +15,7 @@ export const Form = styled.div<FormProps>`
   padding: ${({ theme }) => theme.paddings.xs}px;
   width: ${({ theme, signUpVariant }) => (signUpVariant ? theme.width.ssmm : '')}px;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     flex-direction: column;
     align-items: center;
     padding: ${({ theme }) => theme.paddings.xxxs}px;
@@ -53,7 +53,7 @@ export const Main = styled.section<FormProps>`
   flex-direction: ${({ signUpVariant }) => (signUpVariant ? 'column' : '')};
   justify-content: space-evenly;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     height: fit-content;
     flex-direction: column;
     align-items: center;
@@ -66,7 +66,7 @@ export const InputWrapper = styled.div<FormProps>`
   margin-bottom: ${({ theme, signUpVariant }) => (signUpVariant ? theme.margins.xs : '')}px;
   width: ${({ theme, signUpVariant }) => (signUpVariant ? theme.width.ssmm : theme.width.m)}px;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     margin: ${({ theme }) => theme.margins.xxxs} auto;
     width: ${({ theme }) => theme.width.ssm}px;
     max-width: ${({ theme }) => theme.width.ssm}px;
@@ -93,7 +93,7 @@ export const Input = styled.input<FormProps>`
     border: ${({ theme }) => theme.borders.xxs}px solid ${({ theme }) => theme.colors.LIGHT_PINK};
   }
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     margin: ${({ theme }) => theme.margins.xxs}px auto;
     width: ${({ theme }) => theme.width.ssm}px;
     max-width: ${({ theme }) => theme.width.ssm}px;
@@ -119,7 +119,7 @@ export const Button = styled.button`
     transform: translateX(-10px);
   }
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     margin: ${({ theme }) => theme.margins.xxxs} auto;
     width: ${({ theme }) => theme.width.ssm}px;
     max-width: ${({ theme }) => theme.width.ssss}px;
@@ -147,11 +147,8 @@ export const Alert = styled.button`
 `;
 
 export const ErrorMessage = styled.p`
-  margin-top: ${({ theme }) => theme.margins.xxs}px;
-  color: ${({ theme }) => theme.colors.CHARCOAL};
+  padding-top: ${({ theme }) => theme.paddings.xxs}px;
+  color: ${({ theme }) => theme.colors.CRIMSON};
+  font-weight: ${({ theme }) => theme.fontWeights.xl};
   transition: all 0.2s ease-in-out;
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.WHITE};
-  }
 `;

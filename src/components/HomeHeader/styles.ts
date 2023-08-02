@@ -29,7 +29,7 @@ export const Title = styled.h2`
 
   z-index: ${({ theme }) => theme.zIndexes.s};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     left: 20px;
     width: ${({ theme }) => theme.width.ss}px;
     font-size: ${({ theme }) => theme.fontSizes.xs}px;
@@ -59,7 +59,7 @@ export const Button = styled(Link)`
     opacity: ${({ theme }) => theme.opacities.m};
     transform: translateX(10px);
   }
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     top: 195px;
     width: ${({ theme }) => theme.width.ss}px;
     height: ${({ theme }) => theme.height.xss}px;

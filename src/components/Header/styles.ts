@@ -19,7 +19,7 @@ export const NavBar = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     margin-top: ${({ theme }) => theme.margins.xs}px;
     justify-content: space-evenly;
   }
@@ -32,6 +32,11 @@ export const Banner = styled.div`
   width: ${({ theme }) => theme.width.s}%;
   height: ${({ theme }) => theme.height.xs}px;
   background-color: ${({ theme }) => theme.colors.BEIGE};
+
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
+    padding: 0 ${({ theme }) => theme.paddings.xxs}px 0 ${({ theme }) => theme.paddings.xxs}px;
+    text-align: center;
+  }
 `;
 
 export const Message = styled.h5`
@@ -41,7 +46,7 @@ export const Message = styled.h5`
   font-weight: ${({ theme }) => theme.fontWeights.xl};
   color: ${({ theme }) => theme.colors.CHARCOAL};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     font-size: ${({ theme }) => theme.fontSizes.xs}px;
     font-weight: ${({ theme }) => theme.fontWeights.m};
   }

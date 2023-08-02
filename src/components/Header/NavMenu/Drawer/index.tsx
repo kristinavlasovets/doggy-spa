@@ -1,6 +1,6 @@
 import React, { FC, useRef } from 'react';
 
-import { useOnClickOutside } from '@/hooks/useOnClickOutside';
+import { useOnClickOutside } from '@/hooks';
 
 import { Button, DrawerWrapper, Overlay } from './styles';
 import { DrawerProps } from './types';

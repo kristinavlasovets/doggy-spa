@@ -46,7 +46,7 @@ export const Title = styled.h2`
 
   z-index: ${({ theme }) => theme.zIndexes.s};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     left: 20px;
     width: ${({ theme }) => theme.width.ss}px;
     font-size: ${({ theme }) => theme.fontSizes.xs}px;
@@ -64,7 +64,7 @@ export const Main = styled.div`
   padding: ${({ theme }) => theme.paddings.xs}px;
   background-color: transparent;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     margin-top: ${({ theme }) => theme.margins.xs}px;
     padding: ${({ theme }) => theme.paddings.xxxs}px;
     flex-direction: column;
@@ -80,7 +80,7 @@ export const Booking = styled.div`
   padding: ${({ theme }) => theme.paddings.xs}px;
   background-color: transparent;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     padding: ${({ theme }) => theme.paddings.xxxs}px;
     align-items: center;
   }
@@ -102,7 +102,7 @@ export const InfoWrapper = styled.div`
   justify-content: space-between;
   white-space: pre-wrap;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: ${({ theme }) => theme.width.smm}px;
     padding: ${({ theme }) => theme.paddings.xxs}px;
     justify-content: space-evenly;
@@ -140,7 +140,7 @@ export const MapWrapper = styled.section`
   height: 465px;
   border: ${({ theme }) => theme.borders.s}px solid ${({ theme }) => theme.colors.BEIGE};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: 342px;
     height: 340px;
   }

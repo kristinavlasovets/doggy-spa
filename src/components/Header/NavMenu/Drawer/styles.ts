@@ -9,8 +9,7 @@ export const Overlay = styled.div<OverlayProps>`
   opacity: ${({ theme, isOpen }) => (isOpen ? theme.opacities.l : theme.opacities.m)};
   left: 0%;
   bottom: 0%;
-  background-color: ${({ theme }) => theme.colors.TRANSLUSENT};
-  backdrop-filter: blur(4px);
+  background-image: url('../assets/images/blur.png');
   z-index: ${({ theme }) => theme.zIndexes.m};
   visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
   transition:
@@ -26,8 +25,6 @@ export const DrawerWrapper = styled.div<OverlayProps>`
   top: 0%;
   right: 0%;
   background-color: ${({ theme }) => theme.colors.WHITE};
-  box-shadow: -10px 4px 24px ${({ theme }) => theme.colors.TRANSLUSENT};
-
   display: flex;
   flex-direction: column;
   transform: ${({ isOpen }) => (isOpen ? 'translateX(0%)' : 'translateX(100%)')};

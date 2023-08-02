@@ -1,4 +1,4 @@
-import ShopGoodsItem from '@/components/ShopGoods/ShopGoodsItem';
+import ShopGoodsItem from '@/storybook-lib/ShopGoodsItem';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof ShopGoodsItem> = {
@@ -9,7 +9,7 @@ const meta: Meta<typeof ShopGoodsItem> = {
 export default meta;
 type Story = StoryObj<typeof ShopGoodsItem>;
 
-export const Default: Story = {
+export const ShopGoodsItemDefault: Story = {
   name: 'ShopGoodsItem',
   args: {
     name: 'Home.collarsOne',

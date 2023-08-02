@@ -1,5 +1,6 @@
 import * as yup from 'yup';
 
+import { Value } from '@/components/Form/types';
 import { digitsRegExp, expiryDateRegExp, nameRegExp, phoneRegExp } from '@/constants';
 
 export const newsletterSchema = yup
@@ -22,16 +23,14 @@ export const formSchema = yup
     phoneNumber: yup
       .string()
       .required('Phone number is required')
-      .matches(phoneRegExp, 'Invalid phone format')
-      .min(10, 'Phone number is too short')
-      .max(10, 'Phone number is too long'),
+      .matches(phoneRegExp, 'Invalid phone format. Please, use +375(XX)XXX-XX-XX format'),
     timeslot: yup.array().required('At least one timeslot is required'),
     creditCardNumber: yup
       .string()
       .required('Credit Card Number is required')
       .matches(digitsRegExp, 'Must be only digits')
-      .min(16, 'Must contain 16 numbers')
-      .max(16, 'Must contain 16 numbers'),
+      .min(19, 'Must contain 16 numbers')
+      .max(19, 'Must contain 16 numbers'),
     expiryDate: yup
       .string()
       .required('Expiry Date is required')
@@ -48,3 +47,13 @@ export const formSchema = yup
       .matches(nameRegExp, 'Must be only letters'),
   })
   .required();
+
+export const checkIsDateValid = (value: Value) => {
+  const isPastDate = value! <= new Date();
+
+  const chosenDate = isPastDate
+    ? 'You should choose an upcoming date'
+    : value?.toString().slice(4, 15);
+
+  return { isPastDate, chosenDate };
+};

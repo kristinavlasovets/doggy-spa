@@ -13,7 +13,7 @@ export const Nav = styled.nav`
   font-family: ${({ theme }) => theme.fontFamilies.cormorant};
   color: ${({ theme }) => theme.colors.CHARCOAL};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     display: none;
   }
 `;
@@ -49,7 +49,7 @@ export const Burger = styled.button`
     transform: scale(1.2);
   }
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     display: block;
     position: absolute;
     top: 20px;

@@ -5,11 +5,9 @@ import dynamic from 'next/dynamic';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
 import { useMyTranslation } from '@/app/i18n/client';
-import { paymentMethods, timeslots } from '@/constants';
-import { useOnClickOutside } from '@/hooks/useOnClickOutside';
-import { checkIsDateValid } from '@/utils/checkIsDateValid';
-import { setItemToLocalStorage } from '@/utils/setItemToLocalStorage';
-import { formSchema } from '@/utils/validationSchemas';
+import { digitsRegExp, paymentMethods, timeslots } from '@/constants';
+import { useOnClickOutside } from '@/hooks';
+import { checkIsDateValid, formSchema, setItemToLocalStorage } from '@/utils';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import Modal from './Modal';
@@ -63,6 +61,7 @@ const Form: FC = () => {
   const {
     register,
     handleSubmit,
+    setValue,
     reset,
     formState: { errors, isValid },
   } = useForm<FormInputProps>({
@@ -163,7 +162,28 @@ const Form: FC = () => {
                 type="text"
                 {...register('creditCardNumber', {
                   required: true,
+                  pattern: {
+                    value: digitsRegExp,
+                    message: 'Card number may only contain digits and spaces',
+                  },
                 })}
+                onKeyDown={(e) => {
+                  const backspacePressed = e.key !== 'Backspace';
+                  const currentValue = e.currentTarget.value;
+                  if (backspacePressed) {
+                    const lengthNoSpaces = currentValue.replace(/ /g, '').length;
+                    if (
+                      lengthNoSpaces !== 0 &&
+                      lengthNoSpaces % 4 === 0 &&
+                      currentValue.length < 17
+                    ) {
+                      setValue('creditCardNumber', `${currentValue} `);
+                    }
+                  } else if (currentValue[currentValue.length - 2] === ' ') {
+                    setValue('creditCardNumber', currentValue.substr(0, currentValue.length - 1));
+                  }
+                }}
+                id="creditCardNumber"
                 placeholder={t('BookAppointment.creditCard')}
               />
               <ErrorMessage>{errors.creditCardNumber?.message}</ErrorMessage>
@@ -182,7 +202,7 @@ const Form: FC = () => {
             </InputContainer>
             <InputContainer>
               <Input
-                type="text"
+                type="password"
                 {...register('cvv', {
                   required: true,
                 })}
@@ -206,7 +226,7 @@ const Form: FC = () => {
         </InputPaymentWrapper>
         <Icons>
           {paymentMethods.map(({ icon, href }) => (
-            <a href={href} key={href}>
+            <a href={href} key={href} target="_blank" rel="noreferrer">
               {icon}
             </a>
           ))}

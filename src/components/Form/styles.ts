@@ -8,7 +8,7 @@ export const Wrapper = styled.form`
   align-items: center;
   background-color: transparent;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     margin-top: ${({ theme }) => theme.margins.xs}px;
     width: ${({ theme }) => theme.width.s}%;
   }
@@ -20,7 +20,7 @@ export const InputWrapper = styled.div`
   justify-content: space-between;
   padding: ${({ theme }) => theme.paddings.xs}px;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     flex-direction: column;
     padding: ${({ theme }) => theme.paddings.xxxs}px;
   }
@@ -32,14 +32,14 @@ export const InputContainer = styled.div`
   flex-direction: column;
   width: ${({ theme }) => theme.width.s}%;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     margin-right: ${({ theme }) => theme.margins.xxxs}px;
     align-items: center;
   }
 `;
 
 export const ModalWrapper = styled.div`
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: ${({ theme }) => theme.width.ssmm}px;
   }
 `;
@@ -52,7 +52,7 @@ export const InputPaymentWrapper = styled.div`
   margin: ${({ theme }) => theme.margins.xxxs} auto;
   padding: ${({ theme }) => theme.paddings.xs}px;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     flex-direction: column;
     width: ${({ theme }) => theme.width.smm}px;
     align-items: center;
@@ -66,7 +66,7 @@ export const InputBlock = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     margin-bottom: ${({ theme }) => theme.margins.xxxs}px;
     justify-content: center;
     flex-direction: column;
@@ -79,7 +79,7 @@ export const TimeslotList = styled.div`
   flex-direction: column;
   justify-content: space-around;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: ${({ theme }) => theme.width.ssmm}px;
   }
 `;
@@ -88,7 +88,7 @@ export const Timeslot = styled.div`
   margin-bottom: ${({ theme }) => theme.margins.xxs}px;
   display: flex;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: ${({ theme }) => theme.width.ssmm}px;
   }
 `;
@@ -112,7 +112,7 @@ export const Input = styled.input`
     border: ${({ theme }) => theme.borders.xxs}px solid ${({ theme }) => theme.colors.LIGHT_PINK};
   }
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     margin-left: ${({ theme }) => theme.margins.xxxs}px;
     width: ${({ theme }) => theme.width.ssmm}px;
   }
@@ -173,7 +173,7 @@ export const Textarea = styled.textarea`
     border: ${({ theme }) => theme.borders.xxs}px solid ${({ theme }) => theme.colors.LIGHT_PINK};
   }
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: ${({ theme }) => theme.width.s}%;
     margin-top: ${({ theme }) => theme.margins.xxs}px;
   }
@@ -196,7 +196,7 @@ export const Button = styled.button`
     transform: translateX(10px);
   }
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: ${({ theme }) => theme.width.ssmm}px;
   }
 `;
@@ -209,7 +209,7 @@ export const Icons = styled.div`
   width: ${({ theme }) => theme.width.smmm}px;
   cursor: pointer;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: ${({ theme }) => theme.width.ssmm}px;
   }
 `;
@@ -225,18 +225,15 @@ export const Note = styled.p`
     color: ${({ theme }) => theme.colors.PINK};
   }
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: ${({ theme }) => theme.width.ssmm}px;
   }
 `;
 
 export const ErrorMessage = styled.p`
   margin-left: ${({ theme }) => theme.margins.xxs}px;
-  margin-top: ${({ theme }) => theme.margins.xxs}px;
-  color: ${({ theme }) => theme.colors.CHARCOAL};
+  padding-top: ${({ theme }) => theme.paddings.xxs}px;
+  color: ${({ theme }) => theme.colors.CRIMSON};
+  font-weight: ${({ theme }) => theme.fontWeights.xl};
   transition: all 0.2s ease-in-out;
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.PINK};
-  }
 `;

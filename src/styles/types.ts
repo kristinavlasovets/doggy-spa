@@ -1,6 +1,6 @@
 export interface CommonTheme {
   dimensions: {
-    mobile: number;
+    laptop: number;
   };
   colors: {
     WHITE: string;
@@ -12,7 +12,7 @@ export interface CommonTheme {
     BEIGE: string;
     PINK: string;
     LIGHT_PINK: string;
-    TRANSLUSENT: string;
+    CRIMSON: string;
   };
   fontWeights: {
     xxs: number;
@@ -42,6 +42,7 @@ export interface CommonTheme {
   width: {
     xxs: number;
     xs: number;
+    xss: number;
     s: number;
     ss: number;
     ssss: number;
@@ -84,6 +85,7 @@ export interface CommonTheme {
   borderRadiuses: {
     s: number;
     m: number;
+    l: number;
   };
   opacities: {
     s: number;

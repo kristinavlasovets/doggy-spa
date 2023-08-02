@@ -4,7 +4,7 @@ import { CommonTheme } from './types';
 
 export const commonTheme: CommonTheme = {
   dimensions: {
-    mobile: 495,
+    laptop: 1024,
   },
   colors: {
     WHITE: Colors.WHITE,
@@ -16,7 +16,7 @@ export const commonTheme: CommonTheme = {
     BEIGE: Colors.BEIGE,
     PINK: Colors.PINK,
     LIGHT_PINK: Colors.LIGHT_PINK,
-    TRANSLUSENT: Colors.TRANSLUSENT,
+    CRIMSON: Colors.CRIMSON,
   },
   fontWeights: {
     xxs: 200,
@@ -46,6 +46,7 @@ export const commonTheme: CommonTheme = {
   width: {
     xxs: 24,
     xs: 72,
+    xss: 90,
     s: 100,
     ss: 128,
     ssss: 180,
@@ -88,6 +89,7 @@ export const commonTheme: CommonTheme = {
   borderRadiuses: {
     s: 8,
     m: 30,
+    l: 50,
   },
   opacities: {
     s: 0.2,

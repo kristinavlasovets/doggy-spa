@@ -3,12 +3,12 @@ import styled from 'styled-components';
 export const Wrapper = styled.div`
   padding-top: ${({ theme }) => theme.paddings.xs}px;
   position: fixed;
-  top: 5%;
-  left: 10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: ${({ theme }) => theme.margins.xs} auto;
-  width: 650px;
-  height: 90%;
-
+  width: ${({ theme }) => theme.width.m}px;
+  height: 635px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,10 +21,11 @@ export const Wrapper = styled.div`
   &::-webkit-scrollbar {
     display: none;
   }
-  z-index: ${({ theme }) => theme.zIndexes.s};
+  z-index: ${({ theme }) => theme.zIndexes.m};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
-    width: ${({ theme }) => theme.width.smm}px;
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
+    width: ${({ theme }) => theme.width.ssmm}px;
+    height: 435px;
   }
 `;
 
@@ -35,4 +36,10 @@ export const Text = styled.p`
   font-size: ${({ theme }) => theme.fontSizes.xs}px;
   font-weight: ${({ theme }) => theme.fontWeights.m};
   color: ${({ theme }) => theme.colors.CHARCOAL};
+
+  &::first-line {
+    font-weight: ${({ theme }) => theme.fontWeights.xl};
+    color: ${({ theme }) => theme.colors.BRONZED};
+    text-decoration: underline;
+  }
 `;

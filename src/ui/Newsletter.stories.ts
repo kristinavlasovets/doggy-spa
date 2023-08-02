@@ -1,4 +1,4 @@
-import Newsletter from '@/components/Newsletter';
+import Newsletter from '@/storybook-lib/Newsletter';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof Newsletter> = {
@@ -9,6 +9,6 @@ const meta: Meta<typeof Newsletter> = {
 export default meta;
 type Story = StoryObj<typeof Newsletter>;
 
-export const Default: Story = {
+export const NewsletterDefault: Story = {
   name: 'Newsletter',
 };

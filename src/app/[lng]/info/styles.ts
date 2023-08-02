@@ -18,7 +18,7 @@ export const Title = styled.h2`
   color: ${({ theme }) => theme.colors.CHARCOAL};
   text-transform: uppercase;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     font-size: ${({ theme }) => theme.fontSizes.m}px;
     font-weight: ${({ theme }) => theme.fontWeights.m};
   }
@@ -30,11 +30,11 @@ export const ImageFrame = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: ${({ theme }) => theme.width.xss}%;
   height: 780px;
   background-color: ${({ theme }) => theme.colors.BEIGE};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     height: ${({ theme }) => theme.height.l}px;
   }
 `;
@@ -42,7 +42,7 @@ export const ImageFrame = styled.div`
 export const Image = styled.img`
   aspect-ratio: 9/6;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: ${({ theme }) => theme.width.sm}px;
   }
 `;
@@ -54,7 +54,7 @@ export const Breed = styled.h3`
   font-weight: ${({ theme }) => theme.fontWeights.xl};
   color: ${({ theme }) => theme.colors.BLACK};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     font-size: ${({ theme }) => theme.fontSizes.m}px;
     font-weight: ${({ theme }) => theme.fontWeights.m};
   }
@@ -66,11 +66,11 @@ export const BreedInfo = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 90%;
+  width: ${({ theme }) => theme.width.xss}%;
   height: fit-content;
   background-color: transparent;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     margin: ${({ theme }) => theme.margins.xxs}px auto;
     font-size: ${({ theme }) => theme.fontSizes.m}px;
     font-weight: ${({ theme }) => theme.fontWeights.m};
@@ -85,7 +85,7 @@ export const MainStatistics = styled.p`
   font-weight: ${({ theme }) => theme.fontWeights.xl};
   color: ${({ theme }) => theme.colors.CHARCOAL};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     margin-top: ${({ theme }) => theme.margins.xxxs}px;
     font-size: ${({ theme }) => theme.fontSizes.xs}px;
     font-weight: ${({ theme }) => theme.fontWeights.m};
@@ -99,7 +99,7 @@ export const Statistics = styled.p`
   font-weight: ${({ theme }) => theme.fontWeights.s};
   color: ${({ theme }) => theme.colors.CHARCOAL};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     margin-top: ${({ theme }) => theme.margins.xxxs}px;
     font-size: ${({ theme }) => theme.fontSizes.xs}px;
     font-weight: ${({ theme }) => theme.fontWeights.m};

@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic';
 
 import { useMyTranslation } from '@/app/i18n/client';
 import Form from '@/components/Form';
+import { images } from '@/constants';
 
 import {
   AddressInfo,
@@ -25,13 +26,15 @@ const Map = dynamic(() => import('@/components/Map'), {
   ssr: false,
 });
 
+const { bookHeaderImage } = images;
+
 const BookAppointment: FC = () => {
   const { t } = useMyTranslation();
 
   return (
     <Wrapper>
       <ImageFrame>
-        <Image src="../assets/images/book-header.png" alt="dog" />
+        <Image src={bookHeaderImage} alt="dog" />
         <Title>{t('BookAppointment.subtitle')}</Title>
       </ImageFrame>
       <Main>

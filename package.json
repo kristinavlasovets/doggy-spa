@@ -36,7 +36,6 @@
     "leaflet": "^1.9.4",
     "next": "13.4.7",
     "node-fetch": "2",
-    "ra-data-graphql": "^4.12.2",
     "react": "18.2.0",
     "react-calendar": "^4.6.0",
     "react-dom": "18.2.0",

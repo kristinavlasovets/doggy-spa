@@ -18,7 +18,7 @@ export const Title = styled.h3`
   font-weight: ${({ theme }) => theme.fontWeights.s};
   color: ${({ theme }) => theme.colors.CHARCOAL};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     font-size: ${({ theme }) => theme.fontSizes.s}px;
   }
 `;
@@ -32,7 +32,7 @@ export const ImageFrame = styled.section`
   background-color: ${({ theme }) => theme.colors.WHITE};
   border: ${({ theme }) => theme.borders.s}px solid ${({ theme }) => theme.colors.BEIGE};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: ${({ theme }) => theme.width.smm}px;
     flex-direction: column;
     align-items: center;
@@ -49,7 +49,7 @@ export const ImageBack = styled.img`
   border: ${({ theme }) => theme.borders.s}px solid ${({ theme }) => theme.colors.BEIGE};
   z-index: -${({ theme }) => theme.zIndexes.s};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     display: none;
   }
 `;
@@ -60,7 +60,7 @@ export const Image = styled.img`
   background-color: ${({ theme }) => theme.colors.WHITE};
   border: ${({ theme }) => theme.borders.xs}px solid ${({ theme }) => theme.colors.BEIGE};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     display: none;
   }
 `;
@@ -84,7 +84,7 @@ export const Button = styled.button`
     transform: translateX(-10px);
   }
 
-  @media (max-width: ${({ theme }) => theme.dimensions.tablet}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     margin: ${({ theme }) => theme.margins.xxxs} auto;
     width: ${({ theme }) => theme.width.ssm}px;
     max-width: ${({ theme }) => theme.width.ssss}px;

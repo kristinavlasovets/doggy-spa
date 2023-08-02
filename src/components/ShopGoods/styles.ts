@@ -21,7 +21,7 @@ export const Main = styled.section`
   height: fit-content;
   background-color: transparent;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     height: fit-content;
     display: block;
     margin-left: 75px;
@@ -38,7 +38,7 @@ export const Title = styled.h2`
 
   z-index: ${({ theme }) => theme.zIndexes.s};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     margin-top: ${({ theme }) => theme.margins.s}px;
   }
 `;

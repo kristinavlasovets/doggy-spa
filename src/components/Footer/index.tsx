@@ -2,12 +2,11 @@
 
 import React, { FC, useContext, useMemo } from 'react';
 import { usePathname } from 'next/navigation';
+import Newsletter from 'storybook-lib/Newsletter';
 
 import { useMyTranslation } from '@/app/i18n/client';
 import { socials } from '@/constants/socials';
 import { LanguageContext } from '@/context/LanguageContext';
-
-import Newsletter from '../Newsletter';
 
 import CopyrightMenu from './CopyrightMenu';
 import FooterMenu from './FooterMenu';
@@ -41,7 +40,7 @@ const Footer: FC = () => {
           <Title>{t('Socials.title')}</Title>
           <Icons>
             {socials.map(({ icon, href }) => (
-              <a href={href} key={href}>
+              <a href={href} key={href} target="_blank" rel="noreferrer">
                 {icon}
               </a>
             ))}

@@ -1,14 +1,16 @@
 'use client';
 
 import React, { FC, useContext } from 'react';
+import ShopGoodsItem from 'storybook-lib/ShopGoodsItem';
 
 import { serverTranslation } from '@/app/i18n/client';
-import { carryOnsAssortment, collarsAssortment } from '@/constants';
+import { carryOnsAssortment, collarsAssortment, pathes } from '@/constants';
 import { LanguageContext } from '@/context/LanguageContext';
 
-import ShopGoodsItem from './ShopGoodsItem';
 import { Button, Main, Title, Wrapper } from './styles';
 import { ShopGoodsProps } from './types';
+
+const { info } = pathes;
 
 const ShopGoods: FC<ShopGoodsProps> = ({ variant }) => {
   const lng = useContext(LanguageContext);
@@ -25,7 +27,7 @@ const ShopGoods: FC<ShopGoodsProps> = ({ variant }) => {
           <ShopGoodsItem key={price} image={image} brand={brand} name={name} price={price} />
         ))}
       </Main>
-      <Button href="/info">
+      <Button href={info}>
         {collarsVariant ? t('Home.collarsButton') : t('Home.carryOnsButton')}
       </Button>
     </Wrapper>

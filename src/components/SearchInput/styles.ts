@@ -3,7 +3,7 @@ import { styled } from 'styled-components';
 
 export const Wrapper = styled.div`
   display: flex;
-  width: 90%;
+  width: ${({ theme }) => theme.width.xss}%;
   justify-content: flex-end;
   align-items: flex-end;
 `;
@@ -34,7 +34,7 @@ export const Input = styled.input`
     border: ${({ theme }) => theme.borders.xxs}px solid ${({ theme }) => theme.colors.LIGHT_PINK};
   }
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: ${({ theme }) => theme.width.ssm}px;
   }
 `;
@@ -54,7 +54,7 @@ export const List = styled.ul`
     display: none;
   }
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: ${({ theme }) => theme.width.ssm}px;
   }
 `;
@@ -71,7 +71,7 @@ export const Item = styled.li`
     color: ${({ theme }) => theme.colors.ROSIE};
   }
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     font-size: ${({ theme }) => theme.fontSizes.xs}px;
     font-weight: ${({ theme }) => theme.fontWeights.s};
   }

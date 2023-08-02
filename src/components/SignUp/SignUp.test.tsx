@@ -1,4 +1,3 @@
-/* eslint-disable testing-library/no-wait-for-side-effects */
 import React from 'react';
 import { usePathname } from 'next/navigation';
 import { ThemeProvider } from 'styled-components';

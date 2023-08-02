@@ -2,7 +2,7 @@
 
 import React, { FC, useEffect, useState } from 'react';
 
-import { getItemFromLocalStorage } from '@/utils/getItemFromLocalStorage';
+import { getItemFromLocalStorage } from '@/utils';
 
 import { initialUserCredentials } from './config';
 import PayPalProvider from './PayPalProvider';
@@ -24,7 +24,7 @@ const Modal: FC = () => {
     <Wrapper>
       {Object.entries(userCredentialsValue).map(([key, value]) => (
         <Text key={key}>
-          {key}: {value}
+          {key}:<br /> {value}
         </Text>
       ))}
       <PayPalProvider />

@@ -5,8 +5,9 @@ import React, { ChangeEvent, FC, memo, useState } from 'react';
 import { useMyTranslation } from '@/app/i18n/client';
 import { nameRegExp } from '@/constants';
 import { GET_BY_SEARCH } from '@/graphql/queries';
-import { usePopUp } from '@/hooks/usePopUp';
+import { usePopUp } from '@/hooks';
 import { DogInfo } from '@/types';
+import { setItemToLocalStorage } from '@/utils';
 import { useSuspenseQuery } from '@apollo/experimental-nextjs-app-support/ssr';
 
 import { Form, ImageWrapper, Input, Item, List, Wrapper } from './styles';
@@ -45,6 +46,7 @@ const SearchInput: FC<SearchInputProps> = ({ handleChooseBreed }) => {
 
   const handleSearchBreed = (breed: string) => () => {
     handleChooseBreed(breed)();
+    setItemToLocalStorage('chosenBreed', breed);
     setInputValue('');
   };
 
@@ -65,12 +67,14 @@ const SearchInput: FC<SearchInputProps> = ({ handleChooseBreed }) => {
         />
         {isVisible && (
           <List>
-            {data.getByBreed.length > 0 ? (
-              data.getByBreed.map(({ name }) => (
-                <Item onClick={handleClickBreed(name)} key={name}>
-                  {name}
-                </Item>
-              ))
+            {data.getByBreed.length ? (
+              data.getByBreed
+                .filter(({ name }) => name.charAt(0) === inputValue.toUpperCase())
+                .map(({ name }) => (
+                  <Item onClick={handleClickBreed(name)} key={name}>
+                    {name}
+                  </Item>
+                ))
             ) : (
               <Item>{(errorMessage && t(errorMessage)) || t('Info.noResults')}</Item>
             )}

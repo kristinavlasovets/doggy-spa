@@ -8,5 +8,5 @@ export enum Colors {
   BEIGE = '#F3DED7',
   PINK = '#E89B93',
   LIGHT_PINK = '#FFDAE9',
-  TRANSLUSENT = 'rgba(0, 0, 0, 0.1)',
+  CRIMSON = '#DC143C',
 }

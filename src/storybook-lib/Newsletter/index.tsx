@@ -5,7 +5,7 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 
 import { useMyTranslation } from '@/app/i18n/client';
 import { envVariables } from '@/constants';
-import { newsletterSchema } from '@/utils/validationSchemas';
+import { newsletterSchema } from '@/utils';
 import emailjs from '@emailjs/browser';
 import { yupResolver } from '@hookform/resolvers/yup';
 

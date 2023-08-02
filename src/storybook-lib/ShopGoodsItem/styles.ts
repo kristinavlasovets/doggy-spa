@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   width: 25%;
   height: fit-content;
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     width: ${({ theme }) => theme.width.ssm}px;
   }
 `;
@@ -28,7 +28,7 @@ export const Price = styled.p`
   font-weight: ${({ theme }) => theme.fontWeights.l};
   color: ${({ theme }) => theme.colors.CHARCOAL};
 
-  @media (max-width: ${({ theme }) => theme.dimensions.mobile}px) {
+  @media (max-width: ${({ theme }) => theme.dimensions.laptop}px) {
     margin-top: ${({ theme }) => theme.margins.xxxs}px;
     margin-bottom: ${({ theme }) => theme.margins.xs}px;
   }

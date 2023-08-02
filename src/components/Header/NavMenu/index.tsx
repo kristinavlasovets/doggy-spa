@@ -6,7 +6,7 @@ import { usePathname } from 'next/navigation';
 import { useMyTranslation } from '@/app/i18n/client';
 import { icons } from '@/constants';
 import { headerNavMenu } from '@/constants/navMenu';
-import { checkIsPathActive } from '@/utils/checkIsPathActive';
+import { checkIsPathActive } from '@/utils';
 
 import Drawer from './Drawer';
 import { Burger, LinkItem, Nav } from './styles';

@@ -1,11 +1,12 @@
 'use client';
 
-import React, { FC, Fragment, useCallback, useState } from 'react';
+import React, { FC, Fragment, useCallback, useEffect, useState } from 'react';
 
 import { useMyTranslation } from '@/app/i18n/client';
 import SearchInput from '@/components/SearchInput';
 import { GET_BY_BREED } from '@/graphql/queries';
 import { DogInfo } from '@/types';
+import { getItemFromLocalStorage } from '@/utils';
 import { useSuspenseQuery } from '@apollo/experimental-nextjs-app-support/ssr';
 
 import { initialBreed } from './config';
@@ -21,7 +22,7 @@ import {
 } from './styles';
 
 const Info: FC = () => {
-  const [chosenBreed, setChosenBreed] = useState<string>(initialBreed);
+  const [chosenBreed, setChosenBreed] = useState<string>('');
 
   const { t } = useMyTranslation();
 
@@ -31,6 +32,10 @@ const Info: FC = () => {
     },
     []
   );
+
+  useEffect(() => {
+    setChosenBreed(getItemFromLocalStorage('chosenBreed') || initialBreed);
+  }, []);
 
   const { data }: DogInfo = useSuspenseQuery(GET_BY_BREED, {
     variables: { name: chosenBreed || initialBreed },
